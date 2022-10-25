@@ -13,13 +13,13 @@ export const createCartFragment = (d = document) => {
   const randomCartNumber = generateCart()
   const randomName = generateName()
 
-  const h2 = d.createElement('h2')
-  h2.innerText = 'Cart'
+  const h2Tag = d.createElement('h2')
+  h2Tag.innerText = 'Cart'
 
   const p = d.createElement('p')
   p.innerText = `${randomName} have ${randomCartNumber} item in your cart`
 
-  fragment.appendChild(h2)
+  fragment.appendChild(h2Tag)
   fragment.appendChild(p)
 
   return fragment
@@ -28,5 +28,3 @@ export const createCartFragment = (d = document) => {
 export default createCartFragment;
 
 
-const fragment = createCartFragment(document)
-document.querySelector('#cart-info').appendChild(fragment)
