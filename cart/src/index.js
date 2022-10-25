@@ -25,6 +25,10 @@ export const createCartFragment = (d = document) => {
   return fragment
 }
 
-export default createCartFragment;
+export const mount = (element) => {
+  const fragment = createCartFragment();
+  element.appendChild(fragment);
+};
+
 
 
